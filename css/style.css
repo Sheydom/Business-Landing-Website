@@ -6,9 +6,32 @@
 
 
 :root{
-    --primary-color:#234477;
-  --secondary-color:#234477;
+  --primary-color:#234477;
+  --secondary-color:#F7A542;
+  --h1-font-size: clamp(3rem, 5vw, 3.75rem);
+  --p-base-size: 1rem;
+  --heading-font: "Bebas Neue", sans-serif;
+  --body-font: "Work Sans", sans-serif;
+  --heading-weight: 700;
+  --body-weight:400;
 }
+
+
+h1{
+    font-size: var(--h1-font-size);
+}
+h1,h2{
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+p,button,nav{
+    font-family: var(--body-font);
+    font-weight: var(--body-weight);
+    font-size: var(--p-base-size);
+}
+
+
 
 body,html{
     display: flex;
@@ -18,13 +41,16 @@ body,html{
 }
 
 header{
-    background-color: rgb(0, 0, 0, 0);
+    background-color:#234477 ;
+    /* background-color: rgb(0, 0, 0, 0); */
     position: absolute;
     width: 100%;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 
-
+nav{
+    padding: 10px;
+}
 .navlist{
  list-style: none;
  display: flex;
@@ -39,6 +65,19 @@ header{
     color: white;
 }
 
+#text{
+    margin-bottom: 15px;
+}
+
+#kochibtn{
+    background-color: var(--secondary-color);
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgb(247, 165, 66, 0.7); 
+}
 
 #hero{
     padding: 10px;
@@ -48,14 +87,11 @@ header{
     background-size:cover;
     flex: 1 1 auto;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     border: 1px black solid;
     color: white;
 }
 
-#kochibtn{
-
-}
 
 #history{
     display: flex;
