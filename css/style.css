@@ -148,7 +148,7 @@ article{
     margin: 10px;
     display: grid;
     gap: 10px;
-    grid-template-columns:1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: auto 1fr 1fr;
     grid-template-areas:
      "gridp gridp"
