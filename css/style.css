@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* declaration of font style and the two primary colours */
 
 :root{
   --primary-color:#234477;
@@ -32,7 +33,7 @@ p,button,nav,article{
 }
 
 
-
+/* body has flex and 100vh to make sure we can push footer alwys to the bottom with main flex1 */
 body{
     display: flex;
     flex-direction: column;
@@ -82,7 +83,7 @@ nav li{
 #text{
     margin-bottom: 15px;
 }
-
+/* hover effects for the navbar */
 nav li:hover{
     background-color: rgb(45, 45, 97);    
 }
@@ -101,7 +102,7 @@ nav li:active{
     box-shadow: 0 0 8px rgb(247, 165, 66, 0.7); 
     transition: transform 0.3s ease-in-out;
 }
-
+/* kochibtn hover effets */
 #kochibtn:hover{
     box-shadow: 0 0 15px rgb(247, 165, 66, 1);
 }
@@ -110,11 +111,11 @@ nav li:active{
     transform: scale(0.9);
     
 }
-
+/* main wraps up all content and has flex 1 to make sure the footer is always on the bottom */
 main{
     flex: 1;
 }
-
+/* hero section with adaptiv height */
 #hero{
     padding: 10px;
     display: flex;
@@ -147,7 +148,7 @@ article{
 #history p{
     color: black;
 }
-
+/* grid container */
 .whatwedo{
     margin: 10px;
     display: grid;
@@ -219,7 +220,7 @@ footer{
     justify-content: center;
     padding: 10px;
 }
-
+/* because of mobile first design any screen bigger than  768px will be different displayed */
 @media(min-width:768px){
     .whatwedo{
         grid-template-columns: 1fr 1fr 1fr 1fr;
