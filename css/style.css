@@ -8,7 +8,7 @@
 :root{
   --primary-color:#234477;
   --secondary-color:#F7A542;
-  --h1-font-size: clamp(3rem, 5vw, 3.75rem);
+  --h1-font-size: clamp(3rem, 7vw, 7.75rem);
   --p-base-size: 1rem;
   --heading-font: "Bebas Neue", sans-serif;
   --body-font: "Work Sans", sans-serif;
@@ -36,8 +36,9 @@ p,button,nav,article{
 body{
     display: flex;
     flex-direction: column;
-
+    height: 100vh;
 }
+
 
 header{
     background-color:#234477 ;
@@ -110,13 +111,16 @@ nav li:active{
     
 }
 
+main{
+    flex: 1;
+}
+
 #hero{
     padding: 10px;
     display: flex;
     flex-direction: column;
     background-image: url("/images/rainbow-vortex.png");
     background-size:cover;
-    flex: 1 1 auto;
     justify-content: center;
     align-items: center;
     color: white;
@@ -200,6 +204,7 @@ article{
 
 #history{
     margin: 10px;
+    text-align: justify;
 }
 
 #history{
@@ -213,4 +218,35 @@ footer{
     display:flex; 
     justify-content: center;
     padding: 10px;
+}
+
+@media(min-width:768px){
+    .whatwedo{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        max-width: 1000px;
+        grid-template-areas: 
+        "gridp . . . "
+        "spade club heart diamonds";
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #harticle{
+        display: block;
+        max-width: 1000px;
+        margin: auto;
+        
+       
+    }
+
+    #img{
+        float: left;
+        margin: 10px 10px 10px 0px;
+    }
+    #harticle{
+        margin: auto;
+    }
+    #hero{
+        min-height: clamp(300px, 60vh, 100vh)
+    }
 }
