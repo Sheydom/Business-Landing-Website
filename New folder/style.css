@@ -1,0 +1,264 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* declaration of font style and the two primary colours */
+
+:root{
+  --primary-color:#234477;
+  --secondary-color:#F7A542;
+  --h1-font-size: clamp(3rem, 7vw, 7.75rem);
+  --p-base-size: 1rem;
+  --heading-font: "Bebas Neue", sans-serif;
+  --body-font: "Work Sans", sans-serif;
+  --heading-weight: 700;
+  --body-weight:400;
+}
+
+
+h1{
+    font-size: var(--h1-font-size);
+}
+h1,h2{
+    font-family: var(--heading-font);
+    font-weight: var(--heading-weight);
+}
+
+p,button,nav,article{
+    font-family: var(--body-font);
+    font-weight: var(--body-weight);
+    font-size: var(--p-base-size);
+}
+
+
+/* body has flex and 100vh to make sure we can push footer alwys to the bottom with main flex1 */
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+header{
+    background-color:#234477 ;
+    /* background-color: rgb(0, 0, 0, 0); */
+    /* position: absolute; */
+    width: 100%;
+    margin: 0 auto;
+    border-style: none;
+}
+
+nav{
+   height: 40px;
+}
+
+nav ul{
+    height: 100%; 
+}
+
+nav li{
+    display: flex;
+    height: 100%;
+    border-radius: 10px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+.navlist{
+ list-style: none;
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ gap: 15px;
+}
+
+
+
+.navlink{
+    text-decoration: none;
+    color: white;
+}
+nav li:hover{
+    background-color: rgb(45, 45, 97);    
+}
+
+nav li:active{
+    transform: scale(0.9);
+}
+
+/* i think that taces too much focus away from the landing site */
+
+/* nav li:first-of-type{
+    background-color: var(--secondary-color);
+}
+
+nav li:first-of-type:hover{
+    background-color: var(--secondary-color);
+} */
+
+#text{
+    margin-bottom: 15px;
+}
+/* hover effects for the navbar */
+
+
+#kochibtn{
+    background-color: var(--secondary-color);
+    padding: 10px 50px;
+    font-weight: bold;
+    cursor: pointer;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px rgb(247, 165, 66, 0.7); 
+    transition: transform 0.3s ease-in-out;
+}
+/* kochibtn hover effets */
+#kochibtn:hover{
+    box-shadow: 0 0 15px rgb(247, 165, 66, 1);
+}
+
+#kochibtn:active{
+    transform: scale(0.9);
+    
+}
+/* main wraps up all content and has flex 1 to make sure the footer is always on the bottom */
+main{
+    flex: 1;
+}
+/* hero section with adaptiv height */
+#hero{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/rainbow-vortex.png");
+    background-size:cover;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: clamp(300px, 30vh, 100vh)
+}
+
+
+#history{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+}
+#img{
+    object-fit: contain;
+    height: 300px;
+    
+}
+
+#history p{
+    color: black;
+}
+/* grid container */
+.whatwedo{
+    margin: 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-areas:
+     "gridp gridp"
+    "spade club"
+    "heart diamonds"                    ;
+}
+
+.wwd{
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom,  var(--primary-color) 50%,white 50%);
+    min-height: 120px;
+}
+
+.pstrong{
+    color: white;
+}
+
+
+#articleheader{
+    color: var(--secondary-color);
+    transform: scale(2);
+}
+
+
+#gridp{
+    grid-area: gridp;
+}
+
+.spade{
+    grid-area: spade;
+}
+
+.club{
+    grid-area: club;
+}
+
+.heart{
+    grid-area: heart;
+}
+.diamonds{
+    grid-area: diamonds;
+}
+
+#history{
+    margin: 10px;
+    text-align: justify;
+}
+
+#history{
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display:flex; 
+    justify-content: center;
+    padding: 10px;
+}
+/* because of mobile first design any screen bigger than  768px will be different displayed */
+@media(min-width:768px){
+    .whatwedo{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto 1fr;
+        max-width: 1000px;
+        grid-template-areas: 
+        "gridp . . . "
+        "spade club heart diamonds";
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #harticle{
+        display: block;
+        max-width: 1000px;
+        margin: auto;
+        
+       
+    }
+
+    #img{
+        float: left;
+        margin: 10px 10px 10px 0px;
+    }
+    #harticle{
+        margin: auto;
+    }
+    #hero{
+        min-height: clamp(300px, 60vh, 100vh)
+    }
+}
