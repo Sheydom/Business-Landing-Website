@@ -79,11 +79,6 @@ nav li{
     text-decoration: none;
     color: white;
 }
-
-#text{
-    margin-bottom: 15px;
-}
-/* hover effects for the navbar */
 nav li:hover{
     background-color: rgb(45, 45, 97);    
 }
@@ -91,6 +86,22 @@ nav li:hover{
 nav li:active{
     transform: scale(0.9);
 }
+
+/* i think that taces too much focus away from the landing site */
+
+/* nav li:first-of-type{
+    background-color: var(--secondary-color);
+}
+
+nav li:first-of-type:hover{
+    background-color: var(--secondary-color);
+} */
+
+#text{
+    margin-bottom: 15px;
+}
+/* hover effects for the navbar */
+
 
 #kochibtn{
     background-color: var(--secondary-color);

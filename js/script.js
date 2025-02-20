@@ -12,3 +12,18 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
     .catch(error => console.error("Error loading the navbar:",error))
 })
+
+// here i added another component to reuse the same footer element through all pages 
+document.addEventListener("DOMContentLoaded",()=>{
+    fetch("/components/footer.html")
+    .then(response=> response.text())
+    .then(data=>{
+        document.getElementById("footer").innerHTML=data;
+    })
+    .catch(error=> console.error("Error loading the navbar:",error))
+})
+
+// prevents refreshing page / sending it to a backendserver default behaviour
+document.getElementById("myform").addEventListener("submit",(event)=>{
+    event.preventDefault();
+})
