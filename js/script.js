@@ -24,6 +24,13 @@ document.addEventListener("DOMContentLoaded",()=>{
 })
 
 // prevents refreshing page / sending it to a backendserver default behaviour
-document.getElementById("myform").addEventListener("submit",(event)=>{
-    event.preventDefault();
-})
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("myform");
+    if (form) {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+        });
+    } else {
+        console.error("Form element not found.");
+    }
+});
