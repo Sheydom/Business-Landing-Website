@@ -5,7 +5,7 @@
 // error handling in case of error display error message
 
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("/components/navbar.html")
+    fetch("components/navbar.html")
     .then(response => response.text())
     .then(data =>{
         document.getElementById("navbar-placeholder").innerHTML = data;
