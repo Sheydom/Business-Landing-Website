@@ -5,7 +5,7 @@
 // error handling in case of error display error message
 
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("components/navbar.html")
+    fetch("../components/navbar.html")
     .then(response => response.text())
     .then(data =>{
         document.getElementById("navbar-placeholder").innerHTML = data;
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 // here i added another component to reuse the same footer element through all pages 
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("components/footer.html")
+    fetch("../components/footer.html")
     .then(response=> response.text())
     .then(data=>{
         document.getElementById("footer").innerHTML=data;
