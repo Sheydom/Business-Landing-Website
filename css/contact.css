@@ -106,7 +106,7 @@ nav li:active{
     padding: 10px;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/rainbow-vortex.png");
+    background-image: url("../images/rainbow-vortex.png");
     background-size:cover;
     justify-content: center;
     align-items: center;
