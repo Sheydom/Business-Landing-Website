@@ -111,7 +111,7 @@ nav li:active{
     justify-content: center;
     align-items: center;
     color: white;
-    min-height: clamp(300px, 30vh, 100vh)
+    min-height: clamp(300px, 30vh, 100vh);
 }
 
 #contact{
