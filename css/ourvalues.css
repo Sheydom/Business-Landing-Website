@@ -92,10 +92,10 @@ nav li:active{
 /* nav li:first-of-type{
     background-color: var(--secondary-color);
 }
-
-nav li:first-of-type:hover{
+*/
+nav li:nth-of-type(2){
     background-color: var(--secondary-color);
-} */
+} 
 
 #text{
     margin-bottom: 15px;
@@ -126,104 +126,6 @@ nav li:first-of-type:hover{
 main{
     flex: 1;
 }
-/* hero section with adaptiv height */
-#hero{
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    background-image: url("../images/rainbow-vortex.png");
-    background-size:cover;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    min-height: clamp(300px, 30vh, 100vh)
-}
-
-
-#history{
-    display: flex;
-    justify-content: space-around;
-    
-}
-
-article{
-    display: flex;
-    flex-direction: column;
-}
-#img{
-    object-fit: contain;
-    height: 300px;
-    
-}
-
-#history p{
-    color: black;
-}
-/* grid container */
-.whatwedo{
-    margin: 10px;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-areas:
-     "gridp gridp"
-    "spade club"
-    "heart diamonds"                    ;
-}
-
-.wwd{
-    border: 1px solid var(--primary-color);
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: linear-gradient(to bottom,  var(--primary-color) 50%,white 50%);
-    min-height: 120px;
-}
-
-.pstrong{
-    color: white;
-}
-
-
-.articleheader{
-    color: var(--secondary-color);
-    transform: scale(2);
-}
-
-
-#gridp{
-    grid-area: gridp;
-}
-
-.spade{
-    grid-area: spade;
-}
-
-.club{
-    grid-area: club;
-}
-
-.heart{
-    grid-area: heart;
-}
-.diamonds{
-    grid-area: diamonds;
-}
-
-#history{
-    margin: 10px;
-    text-align: justify;
-}
-
-#history{
-    display: flex;
-    flex-direction: column;
-}
-
 footer{
     background-color: black;
     color: white;
@@ -231,35 +133,3 @@ footer{
     justify-content: center;
     padding: 10px;
 }
-/* because of mobile first design any screen bigger than  768px will be different displayed */
-@media(min-width:768px){
-    .whatwedo{
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: auto 1fr;
-        max-width: 1000px;
-        grid-template-areas: 
-        "gridp . . . "
-        "spade club heart diamonds";
-        margin-left: auto;
-        margin-right: auto;
-    }
-    #harticle{
-        display: block;
-        max-width: 1000px;
-        margin: auto;
-        
-       
-    }
-
-    #img{
-        float: left;
-        margin: 10px 10px 10px 0px;
-    }
-    #harticle{
-        margin: auto;
-    }
-    #hero{
-        min-height: clamp(300px, 60vh, 100vh)
-    }
-}
-
