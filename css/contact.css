@@ -71,7 +71,7 @@ nav li{
 
 nav li:last-of-type{
     background-color: var(--secondary-color);
-    
+    cursor: pointer;
 }
 
 .navlist{
