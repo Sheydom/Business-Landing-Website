@@ -59,6 +59,7 @@ nav ul{
 }
 
 nav li{
+    padding: 10px;
     display: flex;
     height: 100%;
     border-radius: 10px;
