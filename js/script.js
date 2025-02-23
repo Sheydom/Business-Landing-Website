@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded",()=>{
    // let depth = window.location.pathname.split("/").length - 2; // figuring out the level depth of file 
    // let prefix = depth > 0 ? "../".repeat(depth) : ""; //  repeats the amount of ../ by the calculated string length above
    // fetch" prefix + ("path")"
-    fetch("/components/navbar.html")
+    fetch("components/navbar.html")
     .then(response => response.text())
     .then(data =>{
         document.getElementById("navbar-placeholder").innerHTML = data;
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
     //load footer
 
-    fetch("/components/footer.html")
+    fetch("components/footer.html")
 
     .then(response=> response.text())
     .then(data=>{
