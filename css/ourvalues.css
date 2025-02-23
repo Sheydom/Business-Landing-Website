@@ -103,36 +103,47 @@ nav li:active{
 nav li:nth-of-type(2){
     background-color: var(--secondary-color);
 } 
-
-#text{
-    margin-bottom: 15px;
-}
-/* hover effects for the navbar */
-
-
-#kochibtn{
-    background-color: var(--secondary-color);
-    padding: 10px 50px;
-    font-weight: bold;
-    cursor: pointer;
-    border-style: none;
-    border-radius: 5px;
-    box-shadow: 0 0 8px rgb(247, 165, 66, 0.7); 
-    transition: transform 0.3s ease-in-out;
-}
-/* kochibtn hover effets */
-#kochibtn:hover{
-    box-shadow: 0 0 15px rgb(247, 165, 66, 1);
-}
-
-#kochibtn:active{
-    transform: scale(0.9);
-    
-}
 /* main wraps up all content and has flex 1 to make sure the footer is always on the bottom */
 main{
     flex: 1;
 }
+
+/* hover effects for the navbar */
+
+
+#hero{
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-image: url("../images/rainbow-vortex.png");
+    background-size:cover;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    min-height: clamp(300px, 30vh, 100vh)
+}
+
+.hero__div{
+    text-align: justify;
+    padding: 10px;
+}
+.hero__div--blue{
+    background-color: rgb(35, 68, 119,0.7);
+}
+.hero__div--green{
+    background-color: rgb(95, 183, 160,0.7);
+}
+.hero__div--gray{
+    background-color: rgb(165, 165, 165,0.7);
+}
+.hero__div--yellow{
+    background-color: rgb(247, 165, 66,0.7);
+}
+
+
+
+
 footer{
     background-color: black;
     color: white;

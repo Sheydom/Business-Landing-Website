@@ -186,6 +186,8 @@ article{
     text-align: center;
     background: linear-gradient(to bottom,  var(--primary-color) 50%,white 50%);
     min-height: 120px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .pstrong{
@@ -201,6 +203,7 @@ article{
 
 #gridp{
     grid-area: gridp;
+    margin-left: 10px;
 }
 
 .spade{
