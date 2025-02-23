@@ -5,7 +5,9 @@
 // error handling in case of error display error message
 
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("components/navbar.html")
+    let depth = window.location.pathname.split("/").length - 2; // Adjust depth based on folder structure
+    let prefix = depth > 0 ? "../".repeat(depth) : ""; // Go up the folder structure if needed
+    fetch(prefix + "components/navbar.html")
     .then(response => response.text())
     .then(data =>{
         document.getElementById("navbar-placeholder").innerHTML = data;
@@ -15,7 +17,9 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 // here i added another component to reuse the same footer element through all pages 
 document.addEventListener("DOMContentLoaded",()=>{
-    fetch("components/footer.html")
+    let depth = window.location.pathname.split("/").length - 2; // figuring out the level depth of file 
+    let prefix = depth > 0 ? "../".repeat(depth) : ""; // repeats the amount of ../ by the calculated string length above
+    fetch(prefix + "components/footer.html")
 
     .then(response=> response.text())
     .then(data=>{
