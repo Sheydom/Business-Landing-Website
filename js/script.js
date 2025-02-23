@@ -13,12 +13,9 @@ document.addEventListener("DOMContentLoaded",()=>{
         document.getElementById("navbar-placeholder").innerHTML = data;
     })
     .catch(error => console.error("Error loading the navbar:",error))
-})
 
-// here i added another component to reuse the same footer element through all pages 
-document.addEventListener("DOMContentLoaded",()=>{
-    let depth = window.location.pathname.split("/").length - 2; // figuring out the level depth of file 
-    let prefix = depth > 0 ? "../".repeat(depth) : ""; // repeats the amount of ../ by the calculated string length above
+    //load footer
+
     fetch(prefix + "components/footer.html")
 
     .then(response=> response.text())
@@ -27,6 +24,8 @@ document.addEventListener("DOMContentLoaded",()=>{
     })
     .catch(error=> console.error("Error loading the navbar:",error))
 })
+
+
 
 // prevents refreshing page / sending it to a backendserver default behaviour
 document.getElementById("myform").addEventListener("submit",(event)=>{
