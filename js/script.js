@@ -29,6 +29,6 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 // prevents refreshing page / sending it to a backendserver default behaviour
-document.getElementById("myform").addEventListener("submit",(event)=>{
-    event.preventDefault();
-})
+// document.getElementById("myform").addEventListener("submit",(event)=>{
+//     event.preventDefault();
+// })
