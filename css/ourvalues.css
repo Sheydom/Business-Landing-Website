@@ -114,31 +114,70 @@ main{
 #hero{
     height: 100%;
     padding: 10px;
-    display: flex;
     flex-direction: column;
+    display: flex;
     background-image: url("../images/rainbow-vortex.png");
     background-size:cover;
     justify-content: center;
-    align-items: center;
+    align-items: center; 
     color: white;
-    min-height: clamp(300px, 30vh, 100vh)
+    min-height: clamp(300px, 30vh, 100vh);
+}
+
+.hero__article{
+    margin-bottom: 10px;
+    max-width: 500px;
+    border-radius: 20px 0;
+}
+
+.hero__h1--big{
+    margin-bottom: 30px;
 }
 
 .hero__div{
     text-align: justify;
     padding: 10px;
 }
-.hero__div--blue{
+.Teamwork{
+    grid-area: Teamwork;
     background-color: rgb(35, 68, 119,0.7);
+
 }
-.hero__div--green{
+
+.Excellence{
+    grid-area: Excellence;
     background-color: rgb(95, 183, 160,0.7);
+
 }
-.hero__div--gray{
+
+.Global{
+    grid-area: Global;
     background-color: rgb(165, 165, 165,0.7);
+
 }
-.hero__div--yellow{
+
+.Explore{
+    grid-area: Explore;
     background-color: rgb(247, 165, 66,0.7);
+
+}
+
+@media(min-width:768px){
+    #hero{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas:
+    "h1 h1"
+    "Teamwork Excellence"
+    "Global Explore"; 
+    }
+    .hero__article{
+        height: clamp(180px, 185px, 195px);
+        display: flex;
+        padding: 10px;
+    }
 }
 
 
