@@ -1,0 +1,37 @@
+{
+  "name": "busineslandingpage",
+  "version": "1.0.0",
+  "description": "https://sheydom.github.io/Business-Landing-Website/",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "build": "webpack --mode=production",
+    "build:dev": "webpack --mode=development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sheydom/Business-Landing-Website.git"
+  },
+  "author": "Dominic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Sheydom/Business-Landing-Website/issues"
+  },
+  "homepage": "https://github.com/Sheydom/Business-Landing-Website#readme",
+  "devDependencies": {
+    "chai": "^5.2.0",
+    "css-loader": "^7.1.2",
+    "css-minimizer-webpack-plugin": "^7.0.2",
+    "image-minimizer-webpack-plugin": "^4.1.3",
+    "imagemin": "^9.0.1",
+    "imagemin-pngquant": "^10.0.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "mocha": "^11.1.0",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "pngquant-bin": "^9.0.0",
+    "uuid": "^7.0.3"
+  }
+}

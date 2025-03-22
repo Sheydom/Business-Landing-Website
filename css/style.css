@@ -34,10 +34,14 @@ p,button,nav,article{
 
 
 /* body has flex and 100vh to make sure we can push footer alwys to the bottom with main flex1 */
-body{
+html{
+    height:100vh
+};
+
+.hbody{
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    /* height: 100%; */
 }
 
 
@@ -83,23 +87,14 @@ nav li{
     text-decoration: none;
     color: white;
 }
-nav li:hover{
+.hbody nav li:hover{
     background-color: rgb(45, 45, 97);    
 }
 
-nav li:active{
+.hbody nav li:active{
     transform: scale(0.9);
 }
 
-/* i think that taces too much focus away from the landing site */
-
-/* nav li:first-of-type{
-    background-color: var(--secondary-color);
-}
-
-nav li:first-of-type:hover{
-    background-color: var(--secondary-color);
-} */
 
 #text{
     margin-bottom: 15px;
